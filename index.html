@@ -1,7 +1,14 @@
-<!DOCTYPE html>
-<html style="height :100%; width:100%;margin:0; padding:0;" >
-    <body style="height :100%; width:100%; margin:0; padding:0;">
-        <iframe src="ad-banlist.txt" style="height :100%; width:100%;">
-        </iframe>
-    </body>
+<html>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6LdhlyUlAAAAAMahavg2Hw8lMtt7YZpwPGscyaUd"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
 </html>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
