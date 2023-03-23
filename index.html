@@ -1,4 +1,4 @@
-<html>
+<html lang="ja">
   <head>
     <title>reCAPTCHA demo: Simple page</title>
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -9,9 +9,18 @@
      </script>
   </head>
   <body>
-    <form id="demo-form" action="?" method="POST">
-      <button class="g-recaptcha" data-sitekey="6LevsCUlAAAAAGdp_ps0zOO2wdSwxdkpVwGNv08R" data-callback="onSubmit">Submit</button>
+    <form id="demo-form" action="https://caymankun.f5.si/" method="POST">
+      <button class="g-recaptcha" data-sitekey="6LevsCUlAAAAAGdp_ps0zOO2wdSwxdkpVwGNv08R" data-callback="onSubmit">認証</button>
       <br/>
     </form>
   </body>
 </html>
+<style>
+  .g-recaptcha{
+    padding: 20px;
+    border-radius: 300px;
+    color: black;
+    background-color: orange;
+    border:  solid gold;
+  }
+</style>
