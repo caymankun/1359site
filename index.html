@@ -1,30 +1,30 @@
 <html>
     <head>
         <!-- Google reCAPTCHAのスクリプトを読み込む -->
-<script src="https://www.google.com/recaptcha/api.js?render=6LduIyQlAAAAAPA8W0g_AgjB_ZSNJk67ZFfbv6cA"></script>
-         
+<script src="https://www.google.com/recaptcha/api.js?render=6LdhlyUlAAAAAMahavg2Hw8lMtt7YZpwPGscyaUd"></script>
 
+<!-- 自作のJavaScriptコードを読み込む -->
+<script src="script.js"></script>
     </head>
     <body>
         <script>
-             <script>
-   function onSubmit(token) {
-     document.getElementById("demo-form").submit();
-   }
- </script>
+            // reCAPTCHAのトークンを取得する関数
+function getToken() {
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6LdhlyUlAAAAAMahavg2Hw8lMtt7YZpwPGscyaUd', {action: 'submit'}).then(function(token) {
+      // 取得したトークンをサーバーに送信する処理を記述する
+    });
+  });
+}
         </script>
         <!-- フォームのコード -->
 <form>
-    <div class="g-recaptcha" data-sitekey="6LduIyQlAAAAAPA8W0g_AgjB_ZSNJk67ZFfbv6cA"></div>
+    <div class="g-recaptcha" data-sitekey="6LdhlyUlAAAAAMahavg2Hw8lMtt7YZpwPGscyaUd"></div>
     <!-- 送信ボタン -->
-    <button type="submit"
-            class="g-recaptcha" 
-        data-sitekey="reCAPTCHA_site_key" 
-        data-callback='onSubmit' 
-        data-action='submit'>認証</button>
+    <button type="submit">認証</button>
   </form>
   
   <!-- reCAPTCHAのスクリプトを読み込む -->
-         <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </body>
 </html>
