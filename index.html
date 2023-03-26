@@ -1,30 +1,27 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <!-- Google reCAPTCHAのスクリプトを読み込む -->
-<script src="https://www.google.com/recaptcha/api.js?render=6LdhlyUlAAAAAMahavg2Hw8lMtt7YZpwPGscyaUd"></script>
+<head>
+<meta charset="UTF-8">
+	<title>reCAPTCHAテスト</title>
 
-<!-- 自作のJavaScriptコードを読み込む -->
-<script src="script.js"></script>
-    </head>
-    <body>
-        <script>
-            // reCAPTCHAのトークンを取得する関数
-function getToken() {
-  grecaptcha.ready(function() {
-    grecaptcha.execute('6LdhlyUlAAAAAMahavg2Hw8lMtt7YZpwPGscyaUd', {action: 'submit'}).then(function(token) {
-      // 取得したトークンをサーバーに送信する処理を記述する
-    });
-  });
-}
-        </script>
-        <!-- フォームのコード -->
-<form>
-    <div class="g-recaptcha" data-sitekey="6LdhlyUlAAAAAMahavg2Hw8lMtt7YZpwPGscyaUd"></div>
-    <!-- 送信ボタン -->
-    <button type="submit">認証</button>
-  </form>
-  
-  <!-- reCAPTCHAのスクリプトを読み込む -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    </body>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+
+	<form method="post" action="http://caymankun.php.xdomain.jp/bot-block/bot-block.php">
+		<div class="g-recaptcha" data-callback="clearcall" data-sitekey="6LdhlyUlAAAAAMahavg2Hw8lMtt7YZpwPGscyaUd"></div>
+		<input type="submit" name="button" value="送信" disabled>
+	</form>
+
+	<script type="text/javascript">
+	function clearcall(code) {
+		if(code !== ""){
+			$(':submit[name=button]').removeAttr("disabled");
+		}
+	}
+	</script>
+
+</body>
 </html>
