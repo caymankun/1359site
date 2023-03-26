@@ -1,9 +1,30 @@
-<button type="submit" value="Submit" onclick="location.href='https://caymankun.f5.si/'" >join</button>
-<div class="cf-turnstile" data-sitekey="0x4AAAAAAADa8xO2hyM74TzN"></div>
+<html>
+    <head>
+        <!-- Google reCAPTCHAのスクリプトを読み込む -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LduIyQlAAAAAPA8W0g_AgjB_ZSNJk67ZFfbv6cA"></script>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-<script>
-    function javascriptCallback() {
-  document.querySelector('[type="submit"]').removeAttribute('disabled')
+<!-- 自作のJavaScriptコードを読み込む -->
+<script src="script.js"></script>
+    </head>
+    <body>
+        <script>
+            // reCAPTCHAのトークンを取得する関数
+function getToken() {
+  grecaptcha.ready(function() {
+    grecaptcha.execute('サイトキー', {action: 'submit'}).then(function(token) {
+      // 取得したトークンをサーバーに送信する処理を記述する
+    });
+  });
 }
-</script>
+        </script>
+        <!-- フォームのコード -->
+<form>
+    <div class="g-recaptcha" data-sitekey="6LduIyQlAAAAAPA8W0g_AgjB_ZSNJk67ZFfbv6cA"></div>
+    <!-- 送信ボタン -->
+    <button type="submit">認証</button>
+  </form>
+  
+  <!-- reCAPTCHAのスクリプトを読み込む -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </body>
+</html>
