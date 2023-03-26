@@ -1,26 +1,9 @@
-<html>
-  <head>
-    <title>reCAPTCHA demo: Simple page</title>
-     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <script>
-       function onSubmit(token) {
-         document.getElementById("demo-form").submit();
-       }
-     </script>
-  </head>
-  <body>
-    <form id="demo-form" action="http://caymankun.f5.si" method="POST">
-      <button class="g-recaptcha" data-sitekey="6LevsCUlAAAAAGdp_ps0zOO2wdSwxdkpVwGNv08R" data-callback="onSubmit">subbject</button>
-      <br/>
-    </form>
-  </body>
-</html>
-<style>
-  .g-recaptcha{
-    padding: 20px;
-    border-radius: 300px;
-    color: black;
-    background-color: orange;
-    border:  solid gold;
-  }
-</style>
+<button type="submit" value="Submit" onclick="location.href='https://caymankun.f5.si/'" >join</button>
+<div class="cf-turnstile" data-sitekey="0x4AAAAAAADa8xO2hyM74TzN"></div>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+    function javascriptCallback() {
+  document.querySelector('[type="submit"]').removeAttribute('disabled')
+}
+</script>
