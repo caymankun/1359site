@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://caymankun.github.io/1359site/sitemap.xml
