@@ -3,10 +3,45 @@
     <title>caymankun-site</title>
     <link href="https://caymankun.github.io/1359site/feed.xml" rel="self" />
     <link href="https://caymankun.github.io/1359site" />
-    <updated>1970-01-01T09:00:00+09:00</updated>
+    <updated>2023-03-31T08:51:49+09:00</updated>
     <author>
         <name>caymankun</name>
     </author>
     <id>https://caymankun.github.io/1359site</id>
 
+    <entry>
+        <title>caymankun-site</title>
+        <author>
+            <name>caymankun</name>
+        </author>
+        <link href="https://caymankun.github.io/1359site/caymankun-site/"/>
+        <id>https://caymankun.github.io/1359site/caymankun-site/</id>
+
+        <updated>2023-03-31T08:51:49+09:00</updated>
+            <summary>
+                <![CDATA[
+                    caymankunとは？ caymankunは
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+  <div class="post__toc">
+    <h3><span style="font-size: 28.8325px; letter-spacing: -0.3px;">自己紹介</span></h3>
+    <ul>
+      <li><a href="#caymankuntoha">caymankunとは？</a></li>
+    </ul>
+  </div>
+  
+
+    <h2 id="caymankuntoha">
+      caymankunとは？
+    </h2>
+
+  <p>
+    caymankunは
+  </p>
+            ]]>
+        </content>
+    </entry>
 </feed>
